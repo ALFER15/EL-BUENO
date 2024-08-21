@@ -22,7 +22,7 @@
             @foreach($products as $product)
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <a href="/show-producto/{{$product->id}}">{{$product->name}}</a>
+                    <a href="{{route('producto.show',$product->id)}}">{{$product->name}}</a>
                 </th>
                 <td class="px-6 py-4">
                     <a href="/show-producto">{{$product->desc}}</a>
@@ -38,6 +38,7 @@
             @endforeach
         </tbody>
     </table>
+    {{$products->links()}}
 </div>
     <br>
 </x-app-layout>

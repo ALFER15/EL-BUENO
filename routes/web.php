@@ -43,9 +43,9 @@ Route::get('/index-producto-add',function(){
     return $product;
 });
 
-Route::get('/index-producto',[ProductController::class,'index']);
+Route::get('/index-producto',[ProductController::class,'index'])->name('producto.index');
 
-Route::get('/create-producto',[ProductController::class,'create']);
+Route::get('/create-producto',[ProductController::class,'create'])->name('producto.create');
 
-Route::get('/show-producto/{product}',[ProductController::class,'show']);
+Route::get('/show-producto/{product}',[ProductController::class,'show'])->name('producto.show');
 

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::all();
+        $products = Product::paginate(25);
         return view('product.index-producto', compact('products'));
     }
     public function create(){
@@ -16,7 +16,6 @@ class ProductController extends Controller
     }
     public function show($product){
         $productDetail = Product::find($product);
-        return $productDetail;
         return view('product.show-producto',compact('productDetail'));
     }
 }
