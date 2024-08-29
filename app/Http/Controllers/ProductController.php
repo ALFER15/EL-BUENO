@@ -56,3 +56,4 @@ class ProductController extends Controller
         return redirect()->route('producto.show', $productoActualizado->id)->with('edit', 'Actualizacion de registros completa');
     }
 }
+ 
