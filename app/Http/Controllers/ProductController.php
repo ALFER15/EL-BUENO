@@ -44,4 +44,4 @@ class ProductController extends Controller
         $LastProduct = Product::find($product);
         return view('product.update-producto', compact('LastProduct'));
     }
-}
+} 

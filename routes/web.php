@@ -49,4 +49,4 @@ Route::get('/product-show/{product}',[ProductController::class,'show'])->name('p
 
 Route::delete('/product-delete/{product}', [ProductController::class, 'delete'])->name('producto.delete');
 
-Route::get('/product-update/{product}', [ProductController::class, 'updateView'])->name('producto.update');
+Route::get('/product-update/{product}', [ProductController::class, 'updateView'])->name('producto.update'); 
